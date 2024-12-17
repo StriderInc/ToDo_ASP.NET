@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDo", "ToDo\ToDo.csproj", "{6DED7485-D0B7-4E0E-AAA8-F590CB219848}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{369E14BC-9946-4A84-B353-3FAB86D15E23}"
+	ProjectSection(SolutionItems) = preProject
+		compose.yaml = compose.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{DCF613FC-3F67-4449-99CE-B22FF071E103}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDo.Domain", "ToDo.Domain\ToDo.Domain.csproj", "{6E9A398A-A9C2-4049-8C8A-FD2043310B0B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6DED7485-D0B7-4E0E-AAA8-F590CB219848}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DED7485-D0B7-4E0E-AAA8-F590CB219848}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DED7485-D0B7-4E0E-AAA8-F590CB219848}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DED7485-D0B7-4E0E-AAA8-F590CB219848}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E9A398A-A9C2-4049-8C8A-FD2043310B0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E9A398A-A9C2-4049-8C8A-FD2043310B0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E9A398A-A9C2-4049-8C8A-FD2043310B0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E9A398A-A9C2-4049-8C8A-FD2043310B0B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6E9A398A-A9C2-4049-8C8A-FD2043310B0B} = {DCF613FC-3F67-4449-99CE-B22FF071E103}
+	EndGlobalSection
+EndGlobal
