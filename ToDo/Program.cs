@@ -3,10 +3,12 @@ using ToDo.DAL;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
+builder.Services.AddControllersWithViews();
+
+var connectionString = builder.Configuration.GetConnectionString("MSSQL");
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
-    options.UseSqlServer();
+    options.UseSqlServer(connectionString);
 });
 var app = builder.Build();
 
@@ -25,7 +27,8 @@ app.MapStaticAssets();
 
 app.MapControllerRoute(
         name: "default",
-        pattern: "{controller=Home}/{action=Index}/{id?}")
+        pattern: "{controller=Home}/{action=Index}/{id?}"
+    )
     .WithStaticAssets();
 
 

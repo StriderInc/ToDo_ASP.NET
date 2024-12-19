@@ -4,3 +4,23 @@
     build:
       context: .
       dockerfile: ToDo/Dockerfile
+    depends_on:
+      - db
+    environment:
+      - ConnectionStrings__MSSQL=Server=db;Database=ToDo;User Id=sa;Password=YourStrong@Passw0rd;TrustServerCertificate=True
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=YourStrong@Passw0rd
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql_data:/var/opt/mssql
+
+volumes:
+  mssql_data:

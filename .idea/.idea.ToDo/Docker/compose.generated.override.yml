@@ -1,0 +1,22 @@
+# This is a generated file. Not intended for manual editing.
+services:
+  todo:
+    build:
+      context: "C:\\Users\\Geb\\Desktop\\Project\\ASP.NET\\ToDo_ASP.NET"
+      dockerfile: "ToDo/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net9.0/ToDo.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      ASPNETCORE_STATICWEBASSETS: "/app/bin/Debug/net9.0/ToDo.staticwebassets.runtime.CT.json"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "todo:dev"
+    ports: []
+    volumes:
+    - "C:\\Users\\Geb\\Desktop\\Project\\ASP.NET\\ToDo_ASP.NET\\ToDo:/app:rw"
+    - "C:\\Users\\Geb\\Desktop\\Project\\ASP.NET\\ToDo_ASP.NET:/src:rw"
+    - "C:\\Users\\Geb\\.nuget\\packages:/home/app/.nuget/packages"
+    working_dir: "/app"
